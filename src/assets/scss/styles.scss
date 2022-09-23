@@ -1,5 +1,9 @@
+@import "bootstrap";
+
 @import "partials/variables";
+
+@import "./utilities";
 
 @import "partials/global";
 
-@import "bootstrap/scss/bootstrap.scss";
+@import "./partials/buttons";

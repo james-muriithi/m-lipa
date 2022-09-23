@@ -1,0 +1,8 @@
+.btn-primary {
+    @include button-variant(
+        map-get($theme-colors, primary),
+        map-get($theme-colors, primary),
+        $white,
+        $hover-color: $white,
+    );
+}
