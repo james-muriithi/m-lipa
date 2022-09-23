@@ -1,0 +1,23 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap');
+$font-family: 'Montserrat', sans-serif;
+
+// Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1600px,
+) !default;
+$spacer: 1rem;
+
+// Colors
+$primary: #23A6F0;
+$secondary: #23A6F0;
+$white: #fff;
+$dark: #000;
+$nav-link-color: $primary;
+$body-bg: $white;
