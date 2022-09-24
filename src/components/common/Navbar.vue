@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-light bg-transparent mt-2 position-absolute w-100">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="#">M-Lipa</a>
+      <a class="navbar-brand fw-bold text-dark-blue" href="#">M-Lipa</a>
       <button
         class="navbar-toggler"
         type="button"

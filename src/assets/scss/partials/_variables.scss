@@ -28,7 +28,8 @@ $body-bg: $white;
 $theme-colors: map-merge(
   $theme-colors, 
   (
-    "gray": #FAFAFA
+    "gray": #FAFAFA,
+    "dark-blue": #252B42
   )
 );
 
@@ -43,3 +44,14 @@ $font-sizes: map-merge(
 //shadow
 $box-shadow: 0px 8px 13px rgba(0, 0, 0, 0.07);
 
+
+// spacing
+$spacers: map-merge($spacers, 
+  (
+    6: $spacer * 3.5,
+    7: $spacer * 4,
+    8: $spacer * 5,
+    9: $spacer * 5.5,
+    10: $spacer * 6,
+  )
+)
