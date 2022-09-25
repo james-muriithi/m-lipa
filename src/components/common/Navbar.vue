@@ -29,7 +29,7 @@
           <router-link
             class="nav-link text-primary mx-2"
             aria-current="page"
-            to="#"
+            :to="{ name: 'login' }"
           >
             Login
           </router-link>

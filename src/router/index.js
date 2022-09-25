@@ -2,7 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomePage from '../pages/HomePage.vue'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+
+function loadView(view) {
+  return () =>
+    import(/* webpackChunkName: "view-[request]" */ `@/pages/${view}`);
+}
 
 const routes = [
   {
@@ -10,6 +15,11 @@ const routes = [
     name: 'home',
     component: HomePage
   },
+  {
+    path: '/auth/login',
+    name: 'login',
+    component: loadView('auth/Login.vue')
+  }
 ]
 
 function scrollBehavior(to, from, savedPosition) {
