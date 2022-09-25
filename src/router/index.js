@@ -27,8 +27,14 @@ const routes = [
   },
   {
     path: '/dashboard',
-    name: 'dashboard',
-    component: loadView('dashboard/DashboardHome.vue')
+    component: loadView('dashboard/Dashboard.vue'),
+    children: [
+      {
+        path: '/',
+        name: 'dashboard',
+        component: loadView('dashboard/DashboardHome.vue')
+      },
+    ]
   },
 ]
 
