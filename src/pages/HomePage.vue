@@ -1,5 +1,6 @@
 <template>
   <div class="h-100">
+    <Navbar />
     <Banner />
     <AboutUs />
     <Testimonials />
