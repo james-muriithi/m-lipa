@@ -34,7 +34,7 @@
             Login
           </router-link>
 
-          <router-link to="#" class="btn btn-primary mx-2 px-3 mt-3 mt-md-0">
+          <router-link :to="{ name: 'signup' }" class="btn btn-primary mx-2 px-3 mt-3 mt-md-0">
             <div class="center">
               Signup
               <span class="material-icons ps-1">arrow_forward</span>

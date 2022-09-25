@@ -19,7 +19,17 @@ const routes = [
     path: '/auth/login',
     name: 'login',
     component: loadView('auth/Login.vue')
-  }
+  },
+  {
+    path: '/auth/signup',
+    name: 'signup',
+    component: loadView('auth/Signup.vue')
+  },
+  {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: loadView('dashboard/DashboardHome.vue')
+  },
 ]
 
 function scrollBehavior(to, from, savedPosition) {

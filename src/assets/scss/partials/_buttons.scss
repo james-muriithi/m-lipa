@@ -6,3 +6,12 @@
         $hover-color: $white,
     );
 }
+
+.btn-secondary {
+    @include button-variant(
+        map-get($theme-colors, secondary),
+        map-get($theme-colors, secondary),
+        $white,
+        $hover-color: $white,
+    );
+}
