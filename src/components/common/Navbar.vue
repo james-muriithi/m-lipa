@@ -73,3 +73,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.navbar {
+  @include media-breakpoint-down(lg) {
+    background: $white !important;
+  }
+}
+</style>
