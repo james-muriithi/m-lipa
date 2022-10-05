@@ -8,7 +8,7 @@
             <h6 class="text-dark-blue">Login</h6>
             <span class="text-muted"> Easiest way to tranfer money </span>
 
-            <form action="" class="mt-3">
+            <form action="" class="mt-3" @submit.prevent="">
               <div class="mb-4">
                 <label class="form-label">Email</label>
                 <input
@@ -26,9 +26,9 @@
                 />
               </div>
               <div>
-                <button @click.prevent="" class="btn btn-primary w-100">
+                <router-link :to="{ name: 'dashboard' }" class="btn btn-primary w-100">
                   Login
-                </button>
+                </router-link>
               </div>
               <div class="mt-5 text-center">
                 Don't have an account?

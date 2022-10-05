@@ -1,0 +1,19 @@
+@for $i from 0 through 10 {
+    .z-index-#{$i} {
+        z-index: $i !important;
+    }
+    @if $i > 0 {
+        .z-index-n#{$i} {
+            z-index: -#{$i} !important;
+        }
+    }
+}
+
+@each $i in (100, 1000){
+    .z-index-#{$i} {
+        z-index: $i !important;
+    }
+    .z-index-n#{$i} {
+        z-index: -#{$i} !important;
+    }
+}

@@ -1,31 +1,32 @@
 <template>
   <div
     id="app-sidebar"
-    class="app-sidebar position-fixed h-100 top-0 fs-7"
+    class="app-sidebar position-fixed h-100 top-0 fs-7 z-index-10"
     :class="{ open: SidebarOpen }"
   >
     <div
       class="sidebar-inner d-flex flex-column position-relative h-100 bg-white"
     >
-      <a
-        @click.prevent=""
+      <button
+        @click="$emit('closeSidebar')"
         class="
           sidepanel-close
-          d-xl-none
+          d-lg-none
           top-0
-          text-white
+          text-dark
           position-absolute
-          fs-2
+          fs-6
+          rounded-circle
+          btn
         "
       >
         X
-      </a>
+      </button>
       <div class="app-branding pt-3 mb-3 ps-3">
         <router-link
           class="app-logo text-decoration-none fw-semibold fs-5"
           :to="{ name: 'dashboard' }"
         >
-          <img class="logo-icon me-2" src="@/assets/logo.png" alt="logo" />
           <span class="logo-text text-dark-blue">M-Lipa</span>
         </router-link>
       </div>
@@ -73,8 +74,9 @@ export default {
     SidebarOpen: {
       type: Boolean,
       default: true,
-    }
+    },
   },
+  emits: ['closeSidebar']
 };
 </script>
 
@@ -94,9 +96,8 @@ export default {
   }
 
   .sidepanel-close {
-    display: none;
     z-index: 20;
-    right: -2rem;
+    right: 0rem;
   }
 
   .app-branding {

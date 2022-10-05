@@ -1,9 +1,10 @@
 <template>
   <div>
-    <DashboardSidebar :SidebarOpen="sidebarOpen" />
+    <DashboardSidebar @closeSidebar="sidebarOpen = false" :SidebarOpen="sidebarOpen" />
     <div class="app-wrapper" :class="{ 'sidebar-open': sidebarOpen }">
       <div class="app-content pt-3 p-md-3 p-lg-4">
-        <div class="container-xl">
+        <div class="container-xl px-0">
+          <DashboardNavbar @toggleSidebar="sidebarOpen = !sidebarOpen" />
           <router-view />
         </div>
       </div>
@@ -13,10 +14,11 @@
 
 <script>
 import DashboardSidebar from "@/components/common/DashboardSidebar.vue";
+import DashboardNavbar from "@/components/common/DashboardNavbar.vue";
 
 export default {
   name: "Dashboard",
-  components: { DashboardSidebar },
+  components: { DashboardSidebar, DashboardNavbar },
   data() {
     return {
       sidebarOpen: true,
@@ -31,7 +33,7 @@ export default {
   },
   methods: {
     onResize() {
-      this.sidebarOpen = window.innerWidth > 1024;
+      this.sidebarOpen = window.innerWidth > 992;
     },
   },
 };
@@ -39,7 +41,9 @@ export default {
 
 <style lang="scss" scoped>
 .app-wrapper.sidebar-open {
-  margin-left: 250px;
+  @include media-breakpoint-up(lg) {
+    margin-left: 250px;
+  }
   @include transition;
 }
 .app-content {
