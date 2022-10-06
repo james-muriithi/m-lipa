@@ -26,4 +26,4 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Licence
-[MIT](LICENCE.md)
+[MIT](LICENCE)
